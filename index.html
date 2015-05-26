@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ping Pong Arkanoid</title>
+		<style>
+			#main-wrapper {
+				position: relative;
+				width: 482px;
+				height: 620px;
+				top: 10px;
+				text-align: center;
+				margin: 0 auto;
+				background: #51a758;
+			}
+			#main-wrapper>h1 {
+				padding-top: 200px;
+				color: white;
+				opacity: 0.8;
+			}	
+			canvas {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background: transparent;
+			}
+			#background {
+				z-index: -3;
+			}
+			#bricks {
+				z-index: -2;
+			}			
+			#main {
+				z-index: -1;
+			}
+			#bat {
+				z-index: 0;
+			}	
+			h1 {
+				font-family: Arial;
+			}
+			.score-wrapper {
+				position: relative;
+				text-align: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<div id  = "main-wrapper">
+		<h1 id = "start-title">
+		</h1>
+		<!-- The canvas for the panning background -->
+		<canvas id="background" width="482" height="620">
+			Your browser does not support canvas. Please try again with a different browser.
+		</canvas>
+		<!-- The canvas for ball -->
+		<canvas id="main" width="482" height="620">
+		</canvas>
+		<!-- The canvas for the bricks -->
+		<canvas id="bricks" width="482" height="620">
+		</canvas>
+		<!-- The canvas the player uses (can only move up
+         one forth the screen.) -->
+		<canvas id="bat" width="482" height="620">
+		</canvas>
+	</div>
+	<div class = "score-wrapper">
+		<h1 class = "user-score">Your score: <span id = "score">0</span></h1>
+	</div>	
+	</body>
+	<script src="arkanoid-scripts.js"></script>
+</html>
